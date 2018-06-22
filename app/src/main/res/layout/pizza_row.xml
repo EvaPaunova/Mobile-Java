@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="7dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginRight="7dp"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/pizza_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_dough"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/pizza_name"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pizza_ingredients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pizza_image"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_name" />
+
+
+    <Button
+        android:id="@+id/pizza_dough"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="ПРЕГЛЕД"
+        android:textAllCaps="false"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/pizza_price"
+        app:layout_constraintStart_toEndOf="@+id/pizza_image" />
+
+    <TextView
+        android:id="@+id/pizza_price"
+        android:layout_width="0dp"
+        android:layout_height="53dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_order"
+        app:layout_constraintEnd_toStartOf="@+id/button_order"
+        app:layout_constraintStart_toEndOf="@+id/pizza_dough" />
+
+
+    <ImageButton
+        android:id="@+id/button_order"
+        android:layout_width="58dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_line"
+        app:srcCompat="@drawable/cart_dominos" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pizza_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/pizza_ingredients" />
+
+</android.support.constraint.ConstraintLayout>
